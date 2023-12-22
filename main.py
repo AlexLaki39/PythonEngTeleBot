@@ -18,7 +18,7 @@ FREE_DICT_API_HOST = 'https://api.dictionaryapi.dev/api/v2/entries/en'
 DBMS_name = 'postgresql'
 username = 'postgres'
 password = 'password'
-db_name = 'words_db'
+db_name = 'words_db_3'
 
 
 def start_program(bot, session):
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     Base = declarative_base() 
 
     #create_db(username, password, db_name)
-    DSN = "postgresql://postgres:postgres@localhost:5432/words_db"
+    DSN = "postgresql://postgres:password@localhost:5432/words_db_3"
     engine = sq.create_engine(DSN)
     #create_tables(engine)
 

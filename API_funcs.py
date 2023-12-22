@@ -15,5 +15,6 @@ def get_use_example(word, dictionary_api_url):
                             for facts in content[criterion]:
                                 for k in facts.keys():
                                     if k == 'example':
-                                        example_list.append(facts[k])
+                                        if len(example_list) < 3:
+                                            example_list.append(facts[k])
     return example_list
